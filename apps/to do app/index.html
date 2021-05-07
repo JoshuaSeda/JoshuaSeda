@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://i.pinimg.com/originals/9d/72/5f/9d725fe7ec601fb2744d8d704f402a10.gif"
+    />
+
+    <title>To do app</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+	.music{
+		margin-left: 640px;
+		margin-top: 10px;
+	}
+	.musicImg	{
+		cursor: pointer;
+		
+	}
+  </style>
+  <body>
+    <div class="top-img"></div>
+    <main>
+      <div class="header">
+        <h1> School Tasks <img class="musicImg" id="icon" src="https://lh3.googleusercontent.com/proxy/FZC4Y4lbswyj22lf50ND2cNnBsXp9bNlkPibkoueeW-9caJvdbzdo3o6Ph0SKY1xDni5UFmTNU1zPPB_jEk8AH8I93HTntg1UVfrvW8JFLy89AO7mP-OniR7a-UD" style="width: 30px"></h1>
+        <div onclick="changeTheme()" class="tgl-btn"></div>
+      </div>
+      <div class="type-todo">
+        <div id="submit"></div>
+        <input
+          type="text"
+          aria-label="todo-input"
+          id="todo-input"
+          name="todo-input"
+          placeholder="Create a new todo"
+        />
+      </div>
+      <div class="todos"></div>
+      <div class="remarks">
+        <div class="completedCount small-size"></div>
+        <div class="small-size" onclick="clearCompleted()">Clear Completed</div>
+        <div class="filters">
+          <div class="filterActive" onclick="showAll()">All</div>
+          <div onclick="filterActive()">Active</div>
+          <div onclick="filterCompleted()">Completed</div>
+        </div>
+      </div>
+      <p class="footer small-size">Drag and Drop to Reorder</p>
+    </main>
+	 <audio id="mySong">
+		<source src="chill.mp3">
+	  </audio>
+	<script>
+		var mySong = document.getElementById("mySong");
+		var icon = document.getElementById("icon");
+		
+		icon.onclick = function(){
+			mySong.play();
+		}
+	</script>
+    <script src="script.js"></script>
+    <script src="newTodo.js"></script>
+  </body>
+</html>

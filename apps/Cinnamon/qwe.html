@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+		<title> Website Ko </title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">	
+</head>	
+<style>
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+p{
+	margin-bottom: 15px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #a9a9a9;
+}
+
+h1.title{
+	margin-bottom: 20px;
+	color: #d48104;
+	font-family: 'Allura', cursive;
+	text-transform: uppercase;
+	font-size: 38px;
+	word-spacing: 25px;
+	letter-spacing: 5px;
+}
+
+.btn a{
+	display: block;
+	width: 180px;
+	height: 35px;
+	border: 2px solid #d48104;
+	line-height: 35px;
+	margin: 25px auto 0;
+	color: #d48104;
+	text-align: center;
+}
+
+.main_container{
+	position: relative;
+}
+
+/* Navigation bar */
+.navbar{
+	width: 100%;
+	height: 65px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+}
+
+.logo a{
+	font-family: 'Allura', cursive;
+	font-size: 45px;
+	color: #d48104;
+}
+
+.navbar .navbar_items ul{
+	display: flex;
+}
+
+
+.navbar .navbar_items ul li{
+	text-transform: uppercase;
+	margin: 0 10px;
+}
+
+.navbar .navbar_items ul li a{
+	color: #fff;
+}
+
+/* Banner Image */
+.banner_image{
+	background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('https://images.unsplash.com/photo-1523294587484-bae6cc870010?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner_content{
+	text-align: left;
+	color: #fff;
+}
+
+.banner_content h1{
+	font-size: 60px;
+	text-transform: uppercase;
+	line-height: 80px;
+	margin-bottom: 50px;
+	margin-left: 50px;
+	margin-top: 30px;
+}
+
+.banner_content h1 span{
+	color: #d48104;
+}
+.banner_content p{
+	font-size: 30px;
+	margin-left: 200px;
+}
+.about	{	
+	position: relative;
+	width: 100%;
+	display: flex;
+}
+.about	.contentBx	{
+	background: #fff;
+	padding: 100px;
+	width: 50%;
+}	
+.heading	{
+	color: #d48104;
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+}	
+.text	{
+	color: #000;
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}	
+.about	.imgBx	{
+	background: url(https://www.wallpapertip.com/wmimgs/95-956604_bread-background-png.jpg);
+	width: 50%;
+	background-size: cover;
+	background-position: center;
+}	
+.contactus{
+	padding: 5% 10%;
+	text-align: center;
+	background: #fff;
+}	
+.form_input{
+	margin-bottom: 15px;
+	margin-left: 2px;
+}
+.form_input input[type="text"]{
+	width: 250px;
+	padding: 12px 20px;
+	border: 1px solid #ccc;
+}
+
+.form_input textarea{
+	width: 250px;
+	padding: 12px 20px;
+	height: 80px;
+	resize: none;
+	border: 1px solid #ccc;
+}
+.services	{
+	background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(https://images.alphacoders.com/200/200263.jpg);; 
+	padding: 100px;
+	text-align: center;
+}
+.services .text	{
+	color: #fff;
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}	
+.services .container	{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	pointer: cursor;
+}
+img	{
+	border-radius: 8px;
+}	
+.services .container .serviceBx	{
+	position: relative;
+	width: 350px;
+	padding: 40px;
+	background: #fff;
+	box-shadow: 0 5px 15px rgba(0,0,0,.1);
+	border-radius: 20px;
+	margin: 15px;
+	box-sizing: border-box;
+	overflow: hidden;
+}	
+.services .container .serviceBx .icon	{
+	position: relative;
+	width: 3px;
+	height: 3px;
+	color: #fff;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	border-radius: 100%;
+	font-size: 1px;	
+	font-weight: 700;
+	transition: 1s;
+}	
+.services .container .serviceBx:nth-child(1) .icon	{
+	box-shadow: 0 0 0 0 #d48104;
+	background: #d48104
+}	
+.services .container .serviceBx:nth-child(1):hover .icon	{
+	box-shadow: 0 0 0 520px #d48104;
+	background: #d48104;
+}
+.services .container .serviceBx:nth-child(2) .icon	{
+	box-shadow: 0 0 0 0 #d48104;
+	background: #d48104;
+}	
+.services .container .serviceBx:nth-child(2):hover .icon	{
+	box-shadow: 0 0 0 520px #d48104;
+}
+.services .container .serviceBx:nth-child(3) .icon	{
+	box-shadow: 0 0 0 0 #d48104;
+	background: #d48104;
+}	
+.services .container .serviceBx:nth-child(3):hover .icon	{
+	box-shadow: 0 0 0 520px #d48104;
+}
+.services .container .serviceBx .content	{
+	position: relative;
+	z-index: 1;
+	transition: 0.5s;
+}	
+.services .container .serviceBx:hover .content	{
+	color: #fff;
+}
+.services .container .serviceBx .content h3	{
+	font-size: 20px;
+	margin: 10px 0;
+	padding: 0;
+}	
+.services .container .serviceBx .content	{
+	margin: 0;
+	padding: 0;
+}	
+.services .container .serviceBx .content a	{
+	display: block;
+	width: 180px;
+	height: 35px;
+	border: 2px solid #d48104;
+	line-height: 35px;
+	margin: 25px auto 0;
+	color: #d48104;
+	text-align: center;
+}	
+.hover1	{
+	background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(https://s2.best-wallpaper.net/wallpaper/2880x1800/1809/Bread-wheat-food-wood-board_2880x1800.jpg);; 
+	background-size: cover;
+	padding: 100px;
+	height: 100vh;
+}
+.card-container{
+	width: 300px;
+	height: 430px;
+	background: #FFF;
+	border-radius: 6px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	box-shadow: 0px 1px 10px 1px #000;
+	overflow: hidden;
+	display: inline-block;
+}
+.upper-container{
+	height: 150px;
+	background: #d48104;
+}
+.image-container{
+	background: none;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	padding: 5px;
+	transform: translate(100px,100px);
+}
+.image-container img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+.lower-container{
+	height: 280px;
+	background: #FFF;
+	padding: 20px;
+	padding-top: 60px;
+	text-align: center;
+}
+.lower-container h3	{
+	font-weight: 100px;
+}	
+.lower-container h3, h4{
+	box-sizing: border-box;
+	line-height: 2;
+	font-weight: lighter;
+}
+.lower-container h4{
+	color: #d48104;
+	opacity: .6;
+	font-weight: bold;
+	margin-top: -20px;
+}
+.lower-container p{
+	font-size: 16px;
+	color: gray;
+	margin-bottom: 30px;
+}
+.lower-container .btn{
+	padding: 12px 20px;
+	background: #d48104;
+	border: none;
+	color: white;
+	border-radius: 30px;
+	font-size: 12px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: all .3s ease-in;
+}
+.lower-container .btn:hover{
+	background: transparent;
+	color: #d48104;
+	border: 2px solid #d48104;
+}
+.footer{
+	width: 100%;
+	text-align: center;
+	background: rgba(0,0,0,0.8);
+	padding: 10px 0;
+}
+
+.footer a{
+	color: #fff;
+}
+
+
+.loader {
+    width: 16em;
+    height: 8em;
+    position: relative;
+    overflow: hidden;
+}
+
+.loader::before,
+.loader::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+}
+
+.loader::before {
+    width: inherit;
+    height: 0.2em;
+    background-color: hsla(0, 0%, 85%);
+}
+
+.loader::after {
+    box-sizing: border-box;
+    width: 50%;
+    height: inherit;
+    border: 0.2em solid hsla(0, 0%, 85%);
+    border-radius: 50%;
+    left: 25%;
+}
+
+.loader span {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    background-color: white;
+    border-radius: 50%;
+    bottom: 0.2em;
+    left: -5%;
+    animation: 2s linear infinite;
+    transform-origin: 50% -3em;
+    animation-name: run, rotating;
+}
+
+.loader span:nth-child(2) {animation-delay: 0.075s;}
+.loader span:nth-child(3) {animation-delay: 0.15s;}
+
+@keyframes run {
+    0% {left: -5%;}
+    10%, 60% {left: calc((100% - 5%) / 2);}
+    70%, 100% {left: 100%;}
+}
+
+@keyframes rotating {
+    0%, 10% {transform: rotate(0deg);}
+    60%, 100% {transform: rotate(-1turn);}
+}
+    
+
+</style>
+<body>
+   
+<div class="main_container" id="home">
+	<div class="navbar">
+		<div class="logo">
+			<a href="#">Bread Shout!</a>
+		</div>
+		<div class="navbar_items">
+			<ul>
+				<li><a href="#home>home</a></li>
+				<li><a href="#about">about</a></li>
+				<li><a href="#services">services</a></li>
+				<li><a href="#contactus">contact</a></li>
+				<li><a href="#ourteam">our team</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="banner_image">
+		<div class="banner_content">
+			<h1>“There are people in the world so hungry, that <span> God cannot appear to them </span> except in <br>the form of bread.”
+			</h1>
+			<p>― Mahatma Gandhi</p>
+		</div>
+	</div>	
+</div>	
+<!--about-->
+	<section class="about" id="about">
+		<div class="contentBx">
+			<h2 class="heading"> About Us </h2>
+			<p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+			Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+			when an unknown printer took a galley of type and scrambled it to make a type
+			specimen book.<br><br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+			Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+			when an unknown printer took a galley of type and scrambled it to make a type
+			specimen book.</p>
+		</div>	
+		<div class="imgBx"></div>
+	</section>
+
+<!---services--->
+	<section class="services">
+		<h2 class="heading"> Our Services </h2>
+			<p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+			Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+			when an unknown printer took a galley of type and scrambled it to make a type
+			specimen book.<br><br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+			Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+			when an unknown printer took a galley of type and scrambled it to make a type
+			specimen book.</p>		
+		<div class="container">
+			<div class="serviceBx">
+				<div class="icon"> 1 </div>
+				<img src="1.jpg">
+				<div class="content">
+					<h3>Pretzels</h3>
+					<p>Soft pretzels, pretzel bread (which is simply soft pretzel dough shaped into little loaves) and bagels
+					are similar to each other, and different from most other breads, because they are boiled before baking.</p>
+					<a href="#"> Read More </a>
+				</div>	
+			</div>		
+			<div class="serviceBx">
+				<div class="icon"> 2 </div>
+				<img src="2.jpg">
+				<div class="content">
+					<h3> Cinnamon Bread </h3>
+					<p>Cinnamon roll is a sweet roll served commonly in Northern Europe and North America. In Sweden it is called kanelbulle, 
+					in Denmark it is known as kanelsnegl, in Norway it is known as Skillingsboller, Kanelbolle and Kanelsnurr, and in Finland it is known as korvapuusti.</p>
+					<a href="#"> Read More </a>
+				</div>	
+			</div>		
+			<div class="serviceBx">
+				<div class="icon"> 3 </div>
+				<img src="3.jpg">
+				<div class="content">
+					<h3> Kabayan <br> (Pinoy Muffin) </h3>
+					<p>Kababayan is a type of sweet bread popular in the Philippines, muffin like in preparation 
+					and texture this perhaps is its most simplest version as its only made with just eggs, sugar, milk and flour</p>
+					<a href="#"> Read More </a>
+				</div>	
+			</div>		
+		</div>			
+	</section>		
+<!--order form-->
+	<div class="contactus" id="contactus">
+		<h1 class="title">Contact Us</h1>
+		<div class="form_wrapper">
+			<div class="form_input">
+				<input type="text" placeholder="Email">
+			</div>
+			<div class="form_input">
+				<input type="text" placeholder="Subject">
+			</div>
+			<div class="form_input">
+				<textarea placeholder="Message"></textarea>
+			</div>
+			<div class="btn">
+				<a href="#">Submit</a>
+			</div>
+		</div>
+	</div>	
+<!--hover card-->
+	<div class="hover1">
+		<div class="card-container">
+			 <div class="upper-container">
+				<div class="image-container">
+				   <img src="https://upload.wikimedia.org/wikipedia/en/c/cb/MichaelScofieldPrisonBreak.jpeg">
+				</div>
+			 </div>
+			 <div class="lower-container">
+				<div>
+				   <h3>Michael Scofield</h3>
+				   <h4>Front-end Developer</h4>
+				</div>
+				<div>
+				   <p>Mukhang tolongges na pinaglihi sa pinagbiyak na bato na nilulunok ni darna.
+				   </p>
+				</div>
+				<div>
+				   <a href="#" class="btn">View profile</a>
+				</div>
+			 </div>
+			 <div class="lower-container">
+				<div>
+				   <h3>Michael Scofield</h3>
+				   <h4>Front-end Developer</h4>
+				</div>
+				<div>
+				   <p>Mukhang tolongges na pinaglihi sa pinagbiyak na bato na nilulunok ni darna.
+				   </p>
+				</div>
+				<div>
+				   <a href="#" class="btn">View profile</a>
+				</div>
+			 </div>
+			 <div class="lower-container">
+				<div>
+				   <h3>Michael Scofield</h3>
+				   <h4>Front-end Developer</h4>
+				</div>
+				<div>
+				   <p>Mukhang tolongges na pinaglihi sa pinagbiyak na bato na nilulunok ni darna.
+				   </p>
+				</div>
+				<div>
+				   <a href="#" class="btn">View profile</a>
+				</div>
+			 </div>
+		  </div>
+	</div>	
+<!--footer-->	
+	<div class="footer">
+		<a href="#">Copyright by Michael Scofield</a>
+	</div>
+</body>
+</html>	
